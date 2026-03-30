@@ -370,7 +370,15 @@ const [student, setStudent] = useState(null);
   //   .then((data) => {
   //     setStudent(data);
   //   });
-
+useEffect(() => {
+  fetch('http://localhost:3000/student')
+    .then((res) => res.json())
+    .then((data) => {
+      // This updates the state we created in TODO 9
+      setStudent(data);
+    })
+    .catch((error) => console.error("Error fetching student:", error));
+}, []);
   return (
     <main className="app-shell">
       <section className="hero-box">
