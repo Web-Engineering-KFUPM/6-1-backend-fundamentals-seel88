@@ -34,3 +34,8 @@ app.get('/student', (req, res) => {
 
 
 // TODO 4: Start the server on port 3000
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log(`Success! Server is running on http://localhost:${PORT}`);
+    console.log("Press Ctrl+C to stop the server.");
+});
