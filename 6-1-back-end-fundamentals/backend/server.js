@@ -23,7 +23,14 @@ app.get('/about', (req, res) => {
 
 
 // TODO 7: Create the "/student" route
-
+app.get('/student', (req, res) => {
+    res.json({
+        name: "Aseel Bawazir",
+        major: "Software Engineering",
+        university: "KFUPM",
+        lab: "6.1 Backend Fundamentals"
+    });
+});
 
 
 // TODO 4: Start the server on port 3000
